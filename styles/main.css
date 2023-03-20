@@ -299,6 +299,27 @@ a {
 }
 .form__row:last-of-type .form-range input {
   width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+.form__row:last-of-type .form-range input::-webkit-slider-runnable-track {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  height: 13px;
+}
+.form__row:last-of-type .form-range input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  background-color: #42a9ed;
+  border: 3px solid #286690;
+  border-radius: 50%;
+  margin-top: -6px;
 }
 .form__row:last-of-type .form-file {
   width: 32%;

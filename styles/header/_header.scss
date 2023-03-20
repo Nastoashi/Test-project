@@ -1,0 +1,125 @@
+$primaryColor: #3e9cdc;
+$secondaryColor: #fff;
+
+.header {
+  width: 100vw;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background: rgba(16, 16, 29, 0.9);
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1680px;
+    margin: auto;
+    padding: 1.875rem 7rem;
+  }
+  &__logo {
+    display: flex;
+  }
+  &__nav {
+    .navbar__list {
+      display: flex;
+      list-style-type: none;
+      gap: 3.75rem;
+      .navbar__item {
+        color: $secondaryColor;
+        cursor: pointer;
+        text-transform: uppercase;
+        &.header__item__active {
+          color: $primaryColor;
+        }
+      }
+    }
+  }
+  &__overlay {
+    background-color: rgba(0, 0, 0, 0.65);
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    transition: all 0.35s ease-in-out;
+    visibility: hidden;
+    width: 100%;
+    z-index: 9;
+  }
+  &__burger {
+    background: transparent;
+    cursor: pointer;
+    display: none;
+    height: 1rem;
+    opacity: 0;
+    position: relative;
+    user-select: none;
+    visibility: hidden;
+    width: 1.75rem;
+    span {
+      background: #f3f6f9;
+      border: none;
+      display: block;
+      height: 2px;
+      left: 0;
+      opacity: 1;
+      outline: none;
+      position: absolute;
+      width: 100%;
+      &:nth-child(1) {
+        top: 0;
+      }
+      &:nth-child(2) {
+        top: 0.5rem;
+      }
+      &:nth-child(3) {
+        top: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header {
+    &__content {
+      padding: 1.875rem 3rem;
+    }
+    &__burger {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+    }
+    &__overlay.active {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+    }
+    &__nav {
+      background-color: grey;
+      box-shadow: black;
+      height: 100%;
+      left: -100%;
+      opacity: 0;
+      overflow-y: auto;
+      position: fixed;
+      top: 0;
+      transition: all 0.5s ease;
+      visibility: hidden;
+      width: 75%;
+      z-index: 10;
+      &.active {
+        left: 0;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    &__content {
+      padding: 1.875rem 1.5rem;
+    }
+  }
+}

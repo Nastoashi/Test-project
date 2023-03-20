@@ -150,12 +150,16 @@ a {
       width: 32%;
       background: rgba(255, 255, 255, 0.85);
       padding: 13px 30px 13px 10px;
+      transition: 0.3s all ease-in-out;
     }
     .form__input::placeholder {
       color: #272733;
       opacity: 1;
     }
     #sample-select {padding: 0;}
+    .pop-comp-active {
+      background-color: rgba(61, 64, 80, 0.85);
+    }
   }
   &__row:last-of-type {
     .form-range {

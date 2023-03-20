@@ -272,6 +272,7 @@ a {
   width: 32%;
   background: rgba(255, 255, 255, 0.85);
   padding: 13px 30px 13px 10px;
+  transition: 0.3s all ease-in-out;
 }
 .form__row:first-of-type .form__input::-moz-placeholder {
   color: #272733;
@@ -283,6 +284,9 @@ a {
 }
 .form__row:first-of-type #sample-select {
   padding: 0;
+}
+.form__row:first-of-type .pop-comp-active {
+  background-color: rgba(61, 64, 80, 0.85);
 }
 .form__row:last-of-type .form-range {
   width: 66%;

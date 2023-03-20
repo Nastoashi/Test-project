@@ -28,7 +28,7 @@ $secondaryColor: #fff;
         color: $secondaryColor;
         cursor: pointer;
         text-transform: uppercase;
-        &.header__item__active {
+        &.navbar__item__active {
           color: $primaryColor;
         }
       }
@@ -95,7 +95,7 @@ $secondaryColor: #fff;
       visibility: visible;
     }
     &__nav {
-      background-color: grey;
+      background-color: #272733;
       box-shadow: black;
       height: 100%;
       left: -100%;
@@ -111,6 +111,10 @@ $secondaryColor: #fff;
         left: 0;
         opacity: 1;
         visibility: visible;
+        .navbar__list {
+          flex-direction: column;
+          padding: 2rem;
+        }
       }
     }
   }
@@ -120,6 +124,9 @@ $secondaryColor: #fff;
   .header {
     &__content {
       padding: 1.875rem 1.5rem;
+    }
+    &__logo {
+      width: 200px;
     }
   }
 }

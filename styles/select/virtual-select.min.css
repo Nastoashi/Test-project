@@ -39,12 +39,13 @@
   top: 0;
 }
 .vscomp-toggle-button {
+  color: #272733;
+  font-size: 18px;
   align-items: center;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  border-radius: 4px;
   cursor: pointer;
   display: flex;
-  padding: 7px 30px 7px 10px;
+  padding: 13px 30px 13px 10px;
   position: relative;
   width: 100%;
   transition: 0.3s all ease-in-out;
@@ -54,8 +55,8 @@
   color: #fff;
 }
 .vscomp-value {
-  height: 20px;
-  line-height: 20px;
+  height: 22px;
+  line-height: 22px;
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -74,6 +75,10 @@
 }
 .vscomp-arrow.open {
   transform: rotate(180deg);
+}
+.vscomp-arrow.open::after {
+  border-bottom-color: #fff;
+    border-right-color: #fff;
 }
 .vscomp-arrow::after {
   transform: rotate(45deg);
@@ -167,6 +172,7 @@
   right: 0;
 }
 .vscomp-option {
+  font-size: 18px;
   align-items: center;
   cursor: pointer;
   display: flex;
@@ -174,12 +180,13 @@
   height: 40px;
   padding: 0 15px;
   position: relative;
+  color: #fff;
 }
 .vscomp-option.selected {
-  background-color: #eee;
+  color: #42A9ED;
 }
 .vscomp-option.focused {
-  background-color: #ccc;
+  color: #42A9ED;
 }
 .vscomp-option.disabled {
   cursor: default;
@@ -405,7 +412,7 @@
   display: none;
 }
 .vscomp-wrapper:not(.has-value) .vscomp-value {
-  opacity: 0.5;
+  opacity: 1;
 }
 .vscomp-wrapper.has-clear-button.has-value .vscomp-clear-button {
   display: flex;

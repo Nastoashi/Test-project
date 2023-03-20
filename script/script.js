@@ -31,3 +31,14 @@ document.querySelector('#sample-select').addEventListener('beforeClose', () => {
   document.querySelector('.vscomp-arrow').classList.remove('open')
   document.querySelector('.vscomp-toggle-button').classList.remove('open')
 })
+
+// input range script
+
+const range = document.getElementById('range')
+const rangeNumber = document.getElementById('rangeNumber')
+
+rangeNumber.innerHTML = range.value + "%"
+
+range.oninput = function() {
+  rangeNumber.innerHTML = this.value + "%";
+}

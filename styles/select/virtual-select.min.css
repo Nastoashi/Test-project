@@ -55,8 +55,8 @@
   color: #fff;
 }
 .vscomp-value {
-  height: 22px;
-  line-height: 22px;
+  height: 21px;
+  line-height: 21px;
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -163,6 +163,19 @@
   max-height: 210px;
   overflow: auto;
   position: relative;
+}
+.vscomp-options-container::-webkit-scrollbar {
+  width: 10px;
+}
+.vscomp-options-container::-webkit-scrollbar-track {
+  background: #3D4050;
+}
+.vscomp-options-container::-webkit-scrollbar-thumb {
+  background: #3E9CDC;
+  border-radius: 12px;
+}
+.vscomp-options-container::-webkit-scrollbar-thumb:hover {
+  border: 1px solid #fff;
 }
 .vscomp-options-bottom-freezer {
   bottom: 0;
